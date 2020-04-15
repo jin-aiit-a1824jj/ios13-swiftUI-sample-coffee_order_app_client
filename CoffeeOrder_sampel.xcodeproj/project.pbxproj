@@ -13,9 +13,12 @@
 		656D1B50244695E30050C23B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 656D1B4F244695E30050C23B /* Assets.xcassets */; };
 		656D1B53244695E30050C23B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 656D1B52244695E30050C23B /* Preview Assets.xcassets */; };
 		656D1B56244695E30050C23B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 656D1B54244695E30050C23B /* LaunchScreen.storyboard */; };
+		656D1B5E244697110050C23B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 656D1B5D244697110050C23B /* GoogleService-Info.plist */; };
+		ECF2B358D3C11FE84679A2FB /* Pods_CoffeeOrder_sampel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCAF803A275026B8BA3BE8F6 /* Pods_CoffeeOrder_sampel.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		444D1ACD11B2B14A0AB360B9 /* Pods-CoffeeOrder_sampel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeOrder_sampel.release.xcconfig"; path = "Target Support Files/Pods-CoffeeOrder_sampel/Pods-CoffeeOrder_sampel.release.xcconfig"; sourceTree = "<group>"; };
 		656D1B46244695E20050C23B /* CoffeeOrder_sampel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeOrder_sampel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		656D1B49244695E20050C23B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		656D1B4B244695E20050C23B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		656D1B52244695E30050C23B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		656D1B55244695E30050C23B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		656D1B57244695E30050C23B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		656D1B5D244697110050C23B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6EAE3F448604C9C6C3555F53 /* Pods-CoffeeOrder_sampel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeOrder_sampel.debug.xcconfig"; path = "Target Support Files/Pods-CoffeeOrder_sampel/Pods-CoffeeOrder_sampel.debug.xcconfig"; sourceTree = "<group>"; };
+		DCAF803A275026B8BA3BE8F6 /* Pods_CoffeeOrder_sampel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeOrder_sampel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECF2B358D3C11FE84679A2FB /* Pods_CoffeeOrder_sampel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				656D1B48244695E20050C23B /* CoffeeOrder_sampel */,
 				656D1B47244695E20050C23B /* Products */,
+				EC75E2166C2AC2E39EA43759 /* Pods */,
+				FA9089CDEC24358744C1BC68 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +71,7 @@
 				656D1B4F244695E30050C23B /* Assets.xcassets */,
 				656D1B54244695E30050C23B /* LaunchScreen.storyboard */,
 				656D1B57244695E30050C23B /* Info.plist */,
+				656D1B5D244697110050C23B /* GoogleService-Info.plist */,
 				656D1B51244695E30050C23B /* Preview Content */,
 			);
 			path = CoffeeOrder_sampel;
@@ -75,6 +85,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EC75E2166C2AC2E39EA43759 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6EAE3F448604C9C6C3555F53 /* Pods-CoffeeOrder_sampel.debug.xcconfig */,
+				444D1ACD11B2B14A0AB360B9 /* Pods-CoffeeOrder_sampel.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FA9089CDEC24358744C1BC68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCAF803A275026B8BA3BE8F6 /* Pods_CoffeeOrder_sampel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 656D1B5A244695E30050C23B /* Build configuration list for PBXNativeTarget "CoffeeOrder_sampel" */;
 			buildPhases = (
+				6AF825913C6FDBABE33ED2DD /* [CP] Check Pods Manifest.lock */,
 				656D1B42244695E20050C23B /* Sources */,
 				656D1B43244695E20050C23B /* Frameworks */,
 				656D1B44244695E20050C23B /* Resources */,
+				35257FAD1C33C02AF58E7EAA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,12 +164,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				656D1B56244695E30050C23B /* LaunchScreen.storyboard in Resources */,
+				656D1B5E244697110050C23B /* GoogleService-Info.plist in Resources */,
 				656D1B53244695E30050C23B /* Preview Assets.xcassets in Resources */,
 				656D1B50244695E30050C23B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35257FAD1C33C02AF58E7EAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoffeeOrder_sampel/Pods-CoffeeOrder_sampel-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoffeeOrder_sampel/Pods-CoffeeOrder_sampel-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoffeeOrder_sampel/Pods-CoffeeOrder_sampel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AF825913C6FDBABE33ED2DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoffeeOrder_sampel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		656D1B42244695E20050C23B /* Sources */ = {
@@ -282,6 +355,7 @@
 		};
 		656D1B5B244695E30050C23B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EAE3F448604C9C6C3555F53 /* Pods-CoffeeOrder_sampel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +376,7 @@
 		};
 		656D1B5C244695E30050C23B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 444D1ACD11B2B14A0AB360B9 /* Pods-CoffeeOrder_sampel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

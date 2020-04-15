@@ -1,0 +1,6 @@
+framework module Pods_CoffeeOrder_sampel {
+  umbrella header "Pods-CoffeeOrder_sampel-umbrella.h"
+
+  export *
+  module * { export * }
+}
