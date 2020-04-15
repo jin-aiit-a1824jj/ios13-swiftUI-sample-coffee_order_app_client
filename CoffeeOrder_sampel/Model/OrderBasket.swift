@@ -35,15 +35,27 @@ class OrderBasket: Identifiable {
     
     func emptyBasket() {
         self.items = []
-        
+        saveBasketToFirestore()
     }
     
     func saveBasketToFirestore() {
-        FirebaseReference(.Basket).document(self.id).setData(<#T##documentData: [String : Any]##[String : Any]#>)
+        FirebaseReference(.Basket).document(self.id).setData(basketDictionartFrom(self))
     }
     
 }
 
 func basketDictionartFrom(_ basket: OrderBasket) -> [String : Any] {
     
+    var allDrinkIds: [String] = []
+    
+    for drink in basket.items {
+        allDrinkIds.append(drink.id)
+    }
+    
+    return NSDictionary(objects:[basket.id,
+                                                basket.ownerId,
+                                                allDrinkIds],
+                                    forKeys:[ kID as NSCopying,
+                                                 kOWNERID as NSCopying,
+                                                 kDRINKIDS as NSCopying]) as! [String : Any]
 }
