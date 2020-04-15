@@ -50,7 +50,10 @@ struct CheckoutView: View {
                 Text("Total: $\(totalPrice, specifier: "%.2f")").font(.largeTitle),
                      content:{
                 Button(action: {
-                    print("Check out")
+                    print("Confirm Order")
+                    self.showingPaymentAlert.toggle()
+                    self.createOrder()
+                    self.emptyBasket()
                 }, label: { Text("Confirm Order") })
                 })
                 .disabled(self.basketListener.orderBasket?.items.isEmpty ?? true)
@@ -58,9 +61,21 @@ struct CheckoutView: View {
             
         }//Form
          .navigationBarTitle(Text("Payment"), displayMode: .inline)
-        
+         .alert(isPresented: $showingPaymentAlert, content: {
+            Alert(title: Text("Order confiremd"), message: Text("Thank you!"), dismissButton: .default(Text("OK")))
+         })
         
     }
+    
+    
+    private func createOrder() {
+        
+    }
+    
+    private func emptyBasket() {
+        self.basketListener.orderBasket.emptyBasket();
+    }
+    
 }
 
 struct CheckoutView_Previews: PreviewProvider {
