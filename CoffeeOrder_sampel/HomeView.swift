@@ -18,7 +18,7 @@ struct HomeView: View {
                 leading:
                     Button(action: {
                         print("Log out")
-                        createMenu()
+                        
                     }, label: {Text("Log Out")}),
                 trailing:
                     Button(action: {
