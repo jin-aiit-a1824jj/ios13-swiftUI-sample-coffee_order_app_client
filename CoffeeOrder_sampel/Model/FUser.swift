@@ -119,3 +119,21 @@ func downloadUserFromFirestore(userId: String, email: String, completion: @escap
         completion(error)
     }
 }
+
+
+func updateCurrentUser(withValues: [String: Any], completion: @escaping (_ error: Error?) -> Void) {
+    
+    if let dictionary = userDefaults.object(forKey: kCURRENTUSER) {
+        
+        let userObject = (dictionary as! NSDictionary).mutableCopy() as! NSMutableDictionary
+        userObject.setValuesForKeys(withValues)
+        FirebaseReference(.User).document(FUser.currentId()).updateData(withValues){ error in
+            completion(error)
+            if error == nil {
+                saveUserLocally(userDictionary: userObject)
+            }
+        }
+        
+    }
+
+}
