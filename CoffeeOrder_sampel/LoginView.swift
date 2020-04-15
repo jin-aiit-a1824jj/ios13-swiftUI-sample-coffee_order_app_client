@@ -22,36 +22,65 @@ struct LoginView: View {
                 .font(.largeTitle)
                 .padding([.bottom, .top], 20)
             
-            Text("Email ")
-                .fontWeight(.light)
-                .font(.headline)
-                .foregroundColor(Color.init(.label))
-                .opacity(0.75)
+            VStack(alignment: .leading, content: {
+                VStack(alignment: .leading, content: {
+                    Text("Email ")
+                                   .fontWeight(.light)
+                                   .font(.headline)
+                                   .foregroundColor(Color.init(.label))
+                                   .opacity(0.75)
+                               
+                               TextField("Enter yout email", text: $email)
+                               Divider()
+                               
+                               Text("Password ")
+                                   .fontWeight(.light)
+                                   .font(.headline)
+                                   .foregroundColor(Color.init(.label))
+                                   .opacity(0.75)
+                               
+                               SecureField("Enter yout password", text: $password)
+                               Divider()
+                               
+                               if showingSignup {
+                                   Text("Repeat Password ")
+                                       .fontWeight(.light)
+                                       .font(.headline)
+                                       .foregroundColor(Color.init(.label))
+                                       .opacity(0.75)
+                                   
+                                   SecureField("Repeat password", text: $repeatPassword)
+                                   Divider()
+                               }
+                }).padding(.bottom, 15)
+                //VStack
             
-            TextField("Enter yout email", text: $email)
-            Divider()
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        print("Forgot Password?")
+                    }, label: {
+                        Text("Forgot Password?")
+                            .foregroundColor(Color.gray.opacity(0.5))
+                    })
+                }
             
-            Text("Password ")
-                .fontWeight(.light)
-                .font(.headline)
-                .foregroundColor(Color.init(.label))
-                .opacity(0.75)
+            }).padding(.horizontal, 6)
+            //VStack
             
-            SecureField("Enter yout password", text: $password)
-            Divider()
+            Button(action: {
+                print("Sign In")
+            }, label: {
+                Text("Sign In")
+                    .foregroundColor(.white)
+                    .frame(width: UIScreen.main.bounds.width - 120)
+                    .padding()
+                })
+                .background(Color.blue)
+                .clipShape(Capsule())
+                .padding(.top, 45)
             
-            if showingSignup {
-                Text("Repeat Password ")
-                    .fontWeight(.light)
-                    .font(.headline)
-                    .foregroundColor(Color.init(.label))
-                    .opacity(0.75)
-                
-                SecureField("Repeat password", text: $repeatPassword)
-                Divider()
-            }
-            
-        }
+        }//VStack
     }
 }
 
