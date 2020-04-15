@@ -70,6 +70,7 @@ struct DrinkDetail_Previews: PreviewProvider {
 
 struct OrderButton : View {
     
+    @ObservedObject var basketListener = BasketListener()
     @Binding var showAlert: Bool
     
     var drink: Drink
@@ -93,9 +94,14 @@ struct OrderButton : View {
     private func addItemToBasket() {
         var orderBasket: OrderBasket!
         
-        orderBasket = OrderBasket()
-        orderBasket.ownerId = "123"
-        orderBasket.id = UUID().uuidString
+        if self.basketListener.orderBasket != nil {
+            orderBasket = self.basketListener.orderBasket
+        } else {
+            orderBasket = OrderBasket()
+            orderBasket.ownerId = "123"
+            orderBasket.id = UUID().uuidString
+        }
+        
         orderBasket.add(self.drink)
         orderBasket.saveBasketToFirestore()
     }
