@@ -79,6 +79,7 @@ struct OrderButton : View {
             action: {
                 print("Add to Basket, \(self.drink.name)")
                 self.showAlert.toggle()
+                self.addItemToBasket()
         },
             label: { Text("Add to Basket") }
         )
@@ -89,4 +90,13 @@ struct OrderButton : View {
         .cornerRadius(10)
     }
     
+    private func addItemToBasket() {
+        var orderBasket: OrderBasket!
+        
+        orderBasket = OrderBasket()
+        orderBasket.ownerId = "123"
+        orderBasket.id = UUID().uuidString
+        orderBasket.add(self.drink)
+        orderBasket.saveBasketToFirestore()
+    }
 }
