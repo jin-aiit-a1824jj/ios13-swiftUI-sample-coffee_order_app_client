@@ -138,6 +138,18 @@ struct LoginView: View {
     }
     
     private func resetPassword() {
+        if email != "" {
+        
+            FUser.resetPassword(email: email) { (error) in
+                if error != nil {
+                    print("error sending reset password, " , error!.localizedDescription)
+                }
+                print("please check you email")
+            }
+        
+        }else{
+            print("email is empty")
+        }
         
     }
 }
