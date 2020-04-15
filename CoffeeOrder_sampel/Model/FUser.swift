@@ -68,3 +68,38 @@ class FUser {
         }
     }
 }
+
+func userDictionaryFrom(user: FUser) -> [String: Any] {
+    return NSDictionary(objects: [
+        user.id,
+        user.email,
+        user.firstName,
+        user.lastName,
+        user.fullName,
+        user.phoneNumber,
+        user.fullAddress,
+        user.onBoarding
+        ], forKeys: [
+            kID as NSCopying,
+            kEMAIL as NSCopying,
+            kFIRSTNAME as NSCopying,
+            kLASTNAME as NSCopying,
+            kFULLNAME as NSCopying,
+            kPHONENUMBER as NSCopying,
+            kFULLADDRESS as NSCopying,
+            kONBOARD as NSCopying
+    ]) as!  [String: Any]
+}
+
+func saveUserToFirestore(fUser: FUser) {
+    FirebaseReference(.User).document(fUser.id).setData(userDictionaryFrom(user: fUser)) { error in
+        if error != nil {
+            print("Error creating fuser object: ", error!.localizedDescription)
+        }
+    }
+}
+
+func saveUserLocally(userDictionary: NSDictionary) {
+    userDefaults.set(userDictionary, forKey: kCURRENTUSER)
+    userDefaults.synchronize()
+}
