@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		656D1B4A244695E20050C23B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656D1B49244695E20050C23B /* AppDelegate.swift */; };
 		656D1B4C244695E20050C23B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656D1B4B244695E20050C23B /* SceneDelegate.swift */; };
-		656D1B4E244695E20050C23B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656D1B4D244695E20050C23B /* ContentView.swift */; };
+		656D1B4E244695E20050C23B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656D1B4D244695E20050C23B /* HomeView.swift */; };
 		656D1B50244695E30050C23B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 656D1B4F244695E30050C23B /* Assets.xcassets */; };
 		656D1B53244695E30050C23B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 656D1B52244695E30050C23B /* Preview Assets.xcassets */; };
 		656D1B56244695E30050C23B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 656D1B54244695E30050C23B /* LaunchScreen.storyboard */; };
@@ -25,7 +25,7 @@
 		656D1B46244695E20050C23B /* CoffeeOrder_sampel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeOrder_sampel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		656D1B49244695E20050C23B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		656D1B4B244695E20050C23B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		656D1B4D244695E20050C23B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		656D1B4D244695E20050C23B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		656D1B4F244695E30050C23B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		656D1B52244695E30050C23B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		656D1B55244695E30050C23B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,17 +71,16 @@
 		656D1B48244695E20050C23B /* CoffeeOrder_sampel */ = {
 			isa = PBXGroup;
 			children = (
+				656D1B6624469E750050C23B /* Helper */,
+				656D1B6524469E660050C23B /* Model */,
 				656D1B49244695E20050C23B /* AppDelegate.swift */,
 				656D1B4B244695E20050C23B /* SceneDelegate.swift */,
-				656D1B4D244695E20050C23B /* ContentView.swift */,
+				656D1B4D244695E20050C23B /* HomeView.swift */,
 				656D1B4F244695E30050C23B /* Assets.xcassets */,
 				656D1B54244695E30050C23B /* LaunchScreen.storyboard */,
 				656D1B57244695E30050C23B /* Info.plist */,
 				656D1B5D244697110050C23B /* GoogleService-Info.plist */,
 				656D1B51244695E30050C23B /* Preview Content */,
-				656D1B5F244699330050C23B /* Drink.swift */,
-				656D1B6124469A730050C23B /* FirebaseReference.swift */,
-				656D1B6324469B110050C23B /* Constants.swift */,
 			);
 			path = CoffeeOrder_sampel;
 			sourceTree = "<group>";
@@ -92,6 +91,23 @@
 				656D1B52244695E30050C23B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		656D1B6524469E660050C23B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				656D1B5F244699330050C23B /* Drink.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		656D1B6624469E750050C23B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				656D1B6124469A730050C23B /* FirebaseReference.swift */,
+				656D1B6324469B110050C23B /* Constants.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		EC75E2166C2AC2E39EA43759 /* Pods */ = {
@@ -231,7 +247,7 @@
 				656D1B4A244695E20050C23B /* AppDelegate.swift in Sources */,
 				656D1B4C244695E20050C23B /* SceneDelegate.swift in Sources */,
 				656D1B60244699330050C23B /* Drink.swift in Sources */,
-				656D1B4E244695E20050C23B /* ContentView.swift in Sources */,
+				656D1B4E244695E20050C23B /* HomeView.swift in Sources */,
 				656D1B6424469B110050C23B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
