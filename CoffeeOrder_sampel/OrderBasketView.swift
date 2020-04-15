@@ -22,14 +22,18 @@ struct OrderBasketView: View {
                     ForEach(self.basketListener.orderBasket?.items ?? []) { drink in
                         HStack {
                             Text(drink.name)
-                            Text("$\(drink.price)")
+                            Text("$\(drink.price.clean)")
                         }
                     }//ForEach
-                    .onDelete{ (indexSet) in print("Delete as \(indexSet)") }
+                    .onDelete{ (indexSet) in
+                        print("Delete as \(indexSet)")
+                        self.deleteItems(as: indexSet)
+                    }
                 }//Section
                 
                 Section {
-                    Text("Place Order")
+                    NavigationLink(destination: HomeView(), label: {Text("Place Order")})
+                    
                 }.disabled(self.basketListener.orderBasket?.items.isEmpty ?? true)
                 //Section
                 
@@ -39,6 +43,12 @@ struct OrderBasketView: View {
         }//NavigationView
         
     }
+    
+    func deleteItems(as offsets: IndexSet){
+        self.basketListener.orderBasket.items.remove(at: offsets.first!)
+        self.basketListener.orderBasket.saveBasketToFirestore()
+    }
+    
 }
 
 struct OrderBasketView_Previews: PreviewProvider {
