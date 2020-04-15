@@ -32,7 +32,7 @@ struct OrderBasketView: View {
                 }//Section
                 
                 Section {
-                    NavigationLink(destination: HomeView(), label: {Text("Place Order")})
+                    NavigationLink(destination: CheckoutView(), label: {Text("Place Order")})
                     
                 }.disabled(self.basketListener.orderBasket?.items.isEmpty ?? true)
                 //Section

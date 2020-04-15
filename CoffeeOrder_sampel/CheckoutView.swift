@@ -47,17 +47,17 @@ struct CheckoutView: View {
             })//Setion
             
             Section (header:
-                Text("Total: $\(totalPrice.clean)").font(.largeTitle),
+                Text("Total: $\(totalPrice, specifier: "%.2f")").font(.largeTitle),
                      content:{
                 Button(action: {
                     print("Check out")
                 }, label: { Text("Confirm Order") })
-            })//Setion
-                
-            .navigationBarTitle(Text("Payment"), displayMode: .inline)
+                })
+                .disabled(self.basketListener.orderBasket?.items.isEmpty ?? true)
+            //Setion
             
         }//Form
-        
+         .navigationBarTitle(Text("Payment"), displayMode: .inline)
         
         
     }
