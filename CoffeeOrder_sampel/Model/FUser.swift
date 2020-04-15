@@ -38,7 +38,7 @@ class FUser {
     class func currentUser() -> FUser? {
         if Auth.auth().currentUser != nil {
             if let dictionary = userDefaults.object(forKey: kCURRENTUSER) {
-                return nil//FUser(_id: <#T##String#>, email: <#T##String#>, firstName: <#T##String#>, lastName: <#T##String#>, fullName: <#T##String#>, phoneNumber: <#T##String#>)
+                return FUser(dictionary as! NSDictionary)
             }
         }
         return nil
@@ -68,6 +68,17 @@ class FUser {
                 }
             }
         }
+    }
+    
+    init(_ dictionary : NSDictionary) {
+        id = dictionary[kID] as? String ?? ""
+        self.email = dictionary[kEMAIL] as? String ?? ""
+        self.firstName = dictionary[kFIRSTNAME] as? String ?? ""
+        self.lastName = dictionary[kLASTNAME] as? String ?? ""
+        self.fullName = firstName + " " + lastName
+        self.phoneNumber = dictionary[kPHONENUMBER] as? String ?? ""
+        onBoarding = dictionary[kONBOARD] as? Bool ?? false
+        self.fullAddress =  dictionary[kFULLADDRESS] as? String ?? ""
     }
 }
 
