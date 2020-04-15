@@ -22,6 +22,7 @@
 		656D1B6C2446A7B60050C23B /* DrinkListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656D1B6B2446A7B60050C23B /* DrinkListener.swift */; };
 		65757F972446B345002A63E8 /* OrderBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65757F962446B345002A63E8 /* OrderBasket.swift */; };
 		65757F992446B7A2002A63E8 /* BasketListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65757F982446B7A2002A63E8 /* BasketListener.swift */; };
+		65757F9B2446BC88002A63E8 /* OrderBasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65757F9A2446BC88002A63E8 /* OrderBasketView.swift */; };
 		65AB592C2446AC2300068778 /* DrinkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AB592B2446AC2300068778 /* DrinkDetail.swift */; };
 		ECF2B358D3C11FE84679A2FB /* Pods_CoffeeOrder_sampel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCAF803A275026B8BA3BE8F6 /* Pods_CoffeeOrder_sampel.framework */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		656D1B6B2446A7B60050C23B /* DrinkListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkListener.swift; sourceTree = "<group>"; };
 		65757F962446B345002A63E8 /* OrderBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBasket.swift; sourceTree = "<group>"; };
 		65757F982446B7A2002A63E8 /* BasketListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketListener.swift; sourceTree = "<group>"; };
+		65757F9A2446BC88002A63E8 /* OrderBasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBasketView.swift; sourceTree = "<group>"; };
 		65AB592B2446AC2300068778 /* DrinkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetail.swift; sourceTree = "<group>"; };
 		6EAE3F448604C9C6C3555F53 /* Pods-CoffeeOrder_sampel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeOrder_sampel.debug.xcconfig"; path = "Target Support Files/Pods-CoffeeOrder_sampel/Pods-CoffeeOrder_sampel.debug.xcconfig"; sourceTree = "<group>"; };
 		DCAF803A275026B8BA3BE8F6 /* Pods_CoffeeOrder_sampel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeOrder_sampel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,7 @@
 				656D1B672446A16C0050C23B /* DrinkRow.swift */,
 				656D1B692446A31B0050C23B /* DrinkItem.swift */,
 				65AB592B2446AC2300068778 /* DrinkDetail.swift */,
+				65757F9A2446BC88002A63E8 /* OrderBasketView.swift */,
 			);
 			path = CoffeeOrder_sampel;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				656D1B6A2446A31B0050C23B /* DrinkItem.swift in Sources */,
 				65757F992446B7A2002A63E8 /* BasketListener.swift in Sources */,
 				656D1B4A244695E20050C23B /* AppDelegate.swift in Sources */,
+				65757F9B2446BC88002A63E8 /* OrderBasketView.swift in Sources */,
 				656D1B682446A16C0050C23B /* DrinkRow.swift in Sources */,
 				656D1B6C2446A7B60050C23B /* DrinkListener.swift in Sources */,
 				656D1B4C244695E20050C23B /* SceneDelegate.swift in Sources */,
