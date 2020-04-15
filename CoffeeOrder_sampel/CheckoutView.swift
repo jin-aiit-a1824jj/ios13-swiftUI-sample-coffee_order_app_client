@@ -20,6 +20,9 @@ struct CheckoutView: View {
     @State private var showingPaymentAlert = false
 
     var totalPrice : Double {
+        if basketListener.orderBasket == nil {
+            return 0.0
+        }
         let total = basketListener.orderBasket.total
         let tipValue = total / 100 * Double(CheckoutView.self.tipAmounts[tipAmount])
         return total + tipValue
@@ -69,7 +72,12 @@ struct CheckoutView: View {
     
     
     private func createOrder() {
-        
+        let order = Order()
+        order.amount = totalPrice
+        order.id = UUID().uuidString
+        order.customerId = "123"
+        order.orderItems = self.basketListener.orderBasket.items
+        order.saveOrderToFirestore()
     }
     
     private func emptyBasket() {
