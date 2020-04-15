@@ -41,7 +41,17 @@ struct HomeView: View {
                         self.showingBasket.toggle()
                     }, label: {Image("basket")})
             )
-            .sheet(isPresented: $showingBasket, content: {OrderBasketView()})
+            .sheet(isPresented: $showingBasket, content: {
+               
+                if FUser.currentUser() != nil && FUser.currentUser()!.onBoarding {
+                    OrderBasketView()
+                }else if FUser.currentUser() != nil {
+                    FinishRegistrationView()
+                } else {
+                    LoginView()
+                }
+        
+            })//sheet
             
         }
         
