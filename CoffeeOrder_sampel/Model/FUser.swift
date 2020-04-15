@@ -20,7 +20,7 @@ class FUser {
     
     var fullAddress = ""
     var onBoarding = false
-
+    
     init(_id: String, email: String, firstName: String, lastName: String, fullName: String, phoneNumber: String ){
         id = _id
         self.email = email
@@ -58,4 +58,13 @@ class FUser {
         }
     }
     
+    class func registerUserWith(email: String, password: String, completion: @escaping (_ error: Error?) -> Void){
+        Auth.auth().createUser(withEmail: email, password: password){  (authDataResult, error) in
+            if error == nil {
+                authDataResult!.user.sendEmailVerification { (error) in
+                    print("verification email sent error is: ", error?.localizedDescription as Any)
+                }
+            }
+        }
+    }
 }

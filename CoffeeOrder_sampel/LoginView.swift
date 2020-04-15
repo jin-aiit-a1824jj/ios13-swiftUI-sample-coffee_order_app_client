@@ -94,6 +94,25 @@ struct LoginView: View {
 
     private func signUpUser() {
         
+        if email != "" && password != "" && repeatPassword != "" {
+            if password == repeatPassword {
+                
+                FUser.registerUserWith(email: email, password: password) { (error) in
+                    if error != nil {
+                        print("Error registering user: ", error!.localizedDescription)
+                        return
+                    }
+                    print("User has been created")
+                }
+            }else {
+                print("password and  repeatPassword  do not match")
+            }
+            
+        }else {
+            print("Email and password must be set")
+        }
+        
+
     }
     
     private func resetPassword() {
