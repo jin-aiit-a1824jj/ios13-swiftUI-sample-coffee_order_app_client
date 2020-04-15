@@ -21,7 +21,7 @@ class FUser {
     var fullAddress = ""
     var onBoarding = false
     
-    init(_id: String, email: String, firstName: String, lastName: String, fullName: String, phoneNumber: String ){
+    init(_id: String, email: String, firstName: String, lastName: String, phoneNumber: String ){
         id = _id
         self.email = email
         self.firstName = firstName
@@ -48,7 +48,9 @@ class FUser {
         Auth.auth().signIn(withEmail: email, password: password){ (authDataResult, error) in
             if error == nil {
                 if authDataResult!.user.isEmailVerified {
-                    
+                    downloadUserFromFirestore(userId: authDataResult!.user.uid, email: email) { (error) in
+                        completion(error, true)
+                    }
                 } else {
                     completion(error, false)
                 }
@@ -102,4 +104,18 @@ func saveUserToFirestore(fUser: FUser) {
 func saveUserLocally(userDictionary: NSDictionary) {
     userDefaults.set(userDictionary, forKey: kCURRENTUSER)
     userDefaults.synchronize()
+}
+
+func downloadUserFromFirestore(userId: String, email: String, completion: @escaping (_ error: Error?) -> Void) {
+    FirebaseReference(.User).document(userId).getDocument{ (snapshot, error) in
+        guard let snapshot = snapshot else { return }
+        if snapshot.exists {
+            saveUserLocally(userDictionary: snapshot.data()! as NSDictionary)
+        }else {
+            let user = FUser(_id: userId, email: email, firstName: "", lastName: "", phoneNumber: "")
+            saveUserLocally(userDictionary: userDictionaryFrom(user: user) as NSDictionary)
+            saveUserToFirestore(fUser: user)
+        }
+        completion(error)
+    }
 }

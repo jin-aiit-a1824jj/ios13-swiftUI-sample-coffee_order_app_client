@@ -89,7 +89,17 @@ struct LoginView: View {
     }
     
     private func loginUser() {
-        
+        if email != "" && password != ""  {
+            FUser.loginUserWith(email: email, password: password) { (error, isEmailVerified) in
+                if error != nil {
+                    print("error lging in the user: ", error!.localizedDescription)
+                    return
+                }
+                
+                print("user login successful")
+                
+            }
+        }
     }
 
     private func signUpUser() {
