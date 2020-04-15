@@ -15,6 +15,9 @@ class Order: Identifiable {
     var orderItems: [Drink] = []
     var amount = 0.0
     
+    var customerName = ""
+    var isCompleted = false
+    
     func saveOrderToFirestore() {
         FirebaseReference(.Order).document(self.id).setData(orderDictionaryFrom(self)) { error in
             if error != nil {
@@ -33,11 +36,16 @@ func orderDictionaryFrom(_ order: Order) -> [String : Any] {
     }
     
     return NSDictionary(objects:[order.id,
-                                 order.customerId,
-                                 allDrinkIds,
-                                 order.amount],
+                                   order.customerId,
+                                   allDrinkIds,
+                                   order.amount,
+                                   order.customerName,
+                                   order.isCompleted],
                         forKeys:[ kID as NSCopying,
                                        kCUSTOMERID as NSCopying,
                                        kDRINKIDS as NSCopying,
-                                       kAMOUNT as NSCopying]) as! [String : Any]
+                                       kAMOUNT as NSCopying,
+                                       kCUSTOMERID as NSCopying,
+                                       kISCOMPLETED as NSCopying
+    ]) as! [String : Any]
 }
