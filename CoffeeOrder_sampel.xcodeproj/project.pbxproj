@@ -28,6 +28,7 @@
 		65757FA12446C7AB002A63E8 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65757FA02446C7AB002A63E8 /* Order.swift */; };
 		65AB592C2446AC2300068778 /* DrinkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AB592B2446AC2300068778 /* DrinkDetail.swift */; };
 		65C719C82446E40900F14D07 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C719C72446E40900F14D07 /* LoginView.swift */; };
+		65C719CA2446EA1600F14D07 /* FinishRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C719C92446EA1600F14D07 /* FinishRegistrationView.swift */; };
 		ECF2B358D3C11FE84679A2FB /* Pods_CoffeeOrder_sampel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCAF803A275026B8BA3BE8F6 /* Pods_CoffeeOrder_sampel.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		65757FA02446C7AB002A63E8 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		65AB592B2446AC2300068778 /* DrinkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetail.swift; sourceTree = "<group>"; };
 		65C719C72446E40900F14D07 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		65C719C92446EA1600F14D07 /* FinishRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationView.swift; sourceTree = "<group>"; };
 		6EAE3F448604C9C6C3555F53 /* Pods-CoffeeOrder_sampel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeOrder_sampel.debug.xcconfig"; path = "Target Support Files/Pods-CoffeeOrder_sampel/Pods-CoffeeOrder_sampel.debug.xcconfig"; sourceTree = "<group>"; };
 		DCAF803A275026B8BA3BE8F6 /* Pods_CoffeeOrder_sampel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeOrder_sampel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 				65757F9A2446BC88002A63E8 /* OrderBasketView.swift */,
 				65757F9E2446C15B002A63E8 /* CheckoutView.swift */,
 				65C719C72446E40900F14D07 /* LoginView.swift */,
+				65C719C92446EA1600F14D07 /* FinishRegistrationView.swift */,
 			);
 			path = CoffeeOrder_sampel;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				65757F9F2446C15B002A63E8 /* CheckoutView.swift in Sources */,
 				656D1B6A2446A31B0050C23B /* DrinkItem.swift in Sources */,
 				65757F992446B7A2002A63E8 /* BasketListener.swift in Sources */,
+				65C719CA2446EA1600F14D07 /* FinishRegistrationView.swift in Sources */,
 				656D1B4A244695E20050C23B /* AppDelegate.swift in Sources */,
 				65757F9B2446BC88002A63E8 /* OrderBasketView.swift in Sources */,
 				656D1B682446A16C0050C23B /* DrinkRow.swift in Sources */,

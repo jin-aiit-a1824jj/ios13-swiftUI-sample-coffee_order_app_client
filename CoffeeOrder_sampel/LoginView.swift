@@ -60,6 +60,7 @@ struct LoginView: View {
                     Spacer()
                     Button(action: {
                         print("Forgot Password?")
+                        self.resetPassword()
                     }, label: {
                         Text("Forgot Password?")
                             .foregroundColor(Color.gray.opacity(0.5))
@@ -87,14 +88,17 @@ struct LoginView: View {
         }//VStack
     }
     
-    private func loginUser(){
+    private func loginUser() {
         
     }
 
-    private func signUpUser(){
+    private func signUpUser() {
         
     }
     
+    private func resetPassword() {
+        
+    }
 }
 
 
