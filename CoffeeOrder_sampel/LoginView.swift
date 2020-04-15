@@ -14,6 +14,9 @@ struct LoginView: View {
     @State var password = ""
     @State var repeatPassword = ""
     @State var showingSignup = false
+    @State var showingFinishReg = false
+
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack {
@@ -86,17 +89,26 @@ struct LoginView: View {
             SignUpView(showingSignup: $showingSignup)
         
         }//VStack
+        .sheet(isPresented: $showingFinishReg, content: {
+            FinishRegistrationView()
+        })
     }
     
     private func loginUser() {
         if email != "" && password != ""  {
             FUser.loginUserWith(email: email, password: password) { (error, isEmailVerified) in
                 if error != nil {
-                    print("error lging in the user: ", error!.localizedDescription)
+                    print("error loging in the user: ", error!.localizedDescription)
                     return
                 }
                 
-                print("user login successful")
+                print("user login successful, email is verfied: ", isEmailVerified)
+                
+                if FUser.currentUser() != nil && FUser.currentUser()!.onBoarding {
+                    self.presentationMode.wrappedValue.dismiss()
+                } else {
+                    self.showingFinishReg.toggle()
+                }
                 
             }
         }
