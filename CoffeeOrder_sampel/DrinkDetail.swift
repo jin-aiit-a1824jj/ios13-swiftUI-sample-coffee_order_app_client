@@ -10,6 +10,8 @@ import SwiftUI
 
 struct DrinkDetail: View {
     
+    @State private var showingAlert = false
+    
     var drink: Drink
     
     var body: some View {
@@ -46,13 +48,16 @@ struct DrinkDetail: View {
                 .padding()
             HStack {
                 Spacer()
-                OrderButton(drink: self.drink)
+                OrderButton(showAlert: $showingAlert, drink: self.drink)
                 Spacer()
             }.padding(.top, 50)
             
         }
         .edgesIgnoringSafeArea(.top)
         .navigationBarHidden(true)
+        .alert(isPresented: $showingAlert, content: {
+            Alert(title: Text("Added to Basket!"), dismissButton: .default(Text("OK")))
+        })
     }
     
 }
@@ -65,11 +70,16 @@ struct DrinkDetail_Previews: PreviewProvider {
 
 struct OrderButton : View {
     
+    @Binding var showAlert: Bool
+    
     var drink: Drink
     
     var body : some View {
         Button(
-            action: { print("Add to Basket, \(self.drink.name)") },
+            action: {
+                print("Add to Basket, \(self.drink.name)")
+                self.showAlert.toggle()
+        },
             label: { Text("Add to Basket") }
         )
         .frame(width: 200, height: 50)
