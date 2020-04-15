@@ -15,11 +15,14 @@ struct DrinkRow: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            Text(self.categoryName)
+            Text(self.categoryName).font(.title)
+            
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(self.drinks) { drink in
-                        Text("hi")
+                        DrinkItem(drink: drink)
+                            .frame(width: 300)
+                            .padding(.trailing, 30)
                     }
                 }
             }
