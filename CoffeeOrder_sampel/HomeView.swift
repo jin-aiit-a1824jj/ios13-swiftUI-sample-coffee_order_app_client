@@ -33,7 +33,9 @@ struct HomeView: View {
                 leading:
                     Button(action: {
                         print("Log out")
-                        
+                        FUser.logOutCurrentUser { (error) in
+                            print("error loging out use, " , error?.localizedDescription as Any)
+                        }
                     }, label: {Text("Log Out")}),
                 trailing:
                     Button(action: {

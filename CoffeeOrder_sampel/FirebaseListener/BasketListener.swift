@@ -19,7 +19,7 @@ class BasketListener: ObservableObject {
     
     func downloadBasket() {
         
-        FirebaseReference(.Basket).whereField(kOWNERID, isEqualTo: "123").addSnapshotListener{ (snapshot, error) in
+        FirebaseReference(.Basket).whereField(kOWNERID, isEqualTo: FUser.currentId()).addSnapshotListener{ (snapshot, error) in
             guard let snapshot = snapshot else { return}
             if !snapshot.isEmpty {
                 let basketData = snapshot.documents.first!.data()
