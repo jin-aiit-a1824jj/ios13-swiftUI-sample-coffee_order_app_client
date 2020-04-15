@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		656D1B53244695E30050C23B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 656D1B52244695E30050C23B /* Preview Assets.xcassets */; };
 		656D1B56244695E30050C23B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 656D1B54244695E30050C23B /* LaunchScreen.storyboard */; };
 		656D1B5E244697110050C23B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 656D1B5D244697110050C23B /* GoogleService-Info.plist */; };
+		656D1B60244699330050C23B /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656D1B5F244699330050C23B /* Drink.swift */; };
 		ECF2B358D3C11FE84679A2FB /* Pods_CoffeeOrder_sampel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCAF803A275026B8BA3BE8F6 /* Pods_CoffeeOrder_sampel.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		656D1B55244695E30050C23B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		656D1B57244695E30050C23B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		656D1B5D244697110050C23B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		656D1B5F244699330050C23B /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		6EAE3F448604C9C6C3555F53 /* Pods-CoffeeOrder_sampel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeOrder_sampel.debug.xcconfig"; path = "Target Support Files/Pods-CoffeeOrder_sampel/Pods-CoffeeOrder_sampel.debug.xcconfig"; sourceTree = "<group>"; };
 		DCAF803A275026B8BA3BE8F6 /* Pods_CoffeeOrder_sampel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeOrder_sampel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 				656D1B57244695E30050C23B /* Info.plist */,
 				656D1B5D244697110050C23B /* GoogleService-Info.plist */,
 				656D1B51244695E30050C23B /* Preview Content */,
+				656D1B5F244699330050C23B /* Drink.swift */,
 			);
 			path = CoffeeOrder_sampel;
 			sourceTree = "<group>";
@@ -91,7 +94,6 @@
 				6EAE3F448604C9C6C3555F53 /* Pods-CoffeeOrder_sampel.debug.xcconfig */,
 				444D1ACD11B2B14A0AB360B9 /* Pods-CoffeeOrder_sampel.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -221,6 +223,7 @@
 			files = (
 				656D1B4A244695E20050C23B /* AppDelegate.swift in Sources */,
 				656D1B4C244695E20050C23B /* SceneDelegate.swift in Sources */,
+				656D1B60244699330050C23B /* Drink.swift in Sources */,
 				656D1B4E244695E20050C23B /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
