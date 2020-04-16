@@ -45,7 +45,7 @@ func orderDictionaryFrom(_ order: Order) -> [String : Any] {
                                        kCUSTOMERID as NSCopying,
                                        kDRINKIDS as NSCopying,
                                        kAMOUNT as NSCopying,
-                                       kCUSTOMERID as NSCopying,
+                                       kCUSTOMERNAME as NSCopying,
                                        kISCOMPLETED as NSCopying
     ]) as! [String : Any]
 }

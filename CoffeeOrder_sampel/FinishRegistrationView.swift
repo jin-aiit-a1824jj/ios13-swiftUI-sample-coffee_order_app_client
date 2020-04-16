@@ -48,10 +48,10 @@ struct FinishRegistrationView: View {
     }
     
     private func fieldsCompleted() -> Bool {
-        return !self.name.isEmpty &&
-                    !self.surname.isEmpty &&
-                    !self.telephone.isEmpty &&
-                    !self.address.isEmpty
+        return self.name != "" &&
+                  self.surname != "" &&
+                  self.telephone != "" &&
+                  self.address != ""
     }
     
     private func finishRegistration() {

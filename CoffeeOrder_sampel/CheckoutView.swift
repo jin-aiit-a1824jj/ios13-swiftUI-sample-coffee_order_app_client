@@ -77,6 +77,7 @@ struct CheckoutView: View {
         order.id = UUID().uuidString
         order.customerId = FUser.currentId()
         order.orderItems = self.basketListener.orderBasket.items
+        order.customerName = FUser.currentUser()?.fullName ?? ""
         order.saveOrderToFirestore()
     }
     
